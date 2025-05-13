@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- Required meta tags-->
+   <meta charset="utf-8" />
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=0.9, minimum-scale=0.9, user-scalable=no, viewport-fit=cover" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <!-- Color theme for statusbar (Android only) -->
+   <meta name="theme-color" content="#8D51FF" />
+   <!-- Your app title -->
+   <title>Template Tab</title>
+   <!-- Path to Framework7 Library Bundle CSS -->
+   <link rel="stylesheet" href="lib/framework7-bundle.min.css" />
+   <!-- CSS PERSONALIZADO PARA MENU-->
+   <link rel="stylesheet" href="css/index.css" />
+   <link rel="stylesheet" href="css/detalhes.css" />
+   <link rel="stylesheet" href="css/carrinho.css" />
+   <!--Ícones Material Design-->
+   <link rel="stylesheet" href="css/materialdesignicons.min.css" />
+   <!-- Icones do Remix icon-->
+   <link rel="stylesheet" href="css/home.css" />
+<script>
+   navigator.serviceWorker.register("service-worker.js");
+</script> 
+<link rel="manifest" href="manifest.json" />   
+<link rel="stylesheet" href="css/remixicon/remixicon.css" />
+</head>
+
+<body>
+   <!-- App root element -->
+   <div id="app">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+         <!-- TAB BAR-->
+         <div id="menuPrincipal" class="toolbar toolbar-bottom display-none">
+            <div class="toolbar-inner display-flex">
+               <a href="/home/" class="tab-link link active">
+                  <i class="mdi mdi-home"></i>
+                  <span>Home</span>
+               </a>
+               <a href="/produtos/" class="tab-link link">
+                  <i class="mdi mdi-archive"></i>
+                  <span>Produtos</span>
+               </a>
+               <a href="/clientes/" class="tab-link link">
+                  <i class="mdi mdi-account-group"></i>
+                  <span>Clientes</span>
+               </a>
+               <a href="/vendas/" class="tab-link link">
+                  <i class="mdi mdi-cart"></i>
+                  <span>Vendas</span>
+               </a>
+               <a href="/mais/" class="tab-link link">
+                  <i class="mdi mdi-dots-horizontal"></i>
+                  <span>Mais</span>
+               </a>
+            </div>
+         </div>
+
+         <!-- Nested panel has parent page specified in containerEl parameter -->
+         <div class="panel panel-left panel-cover panel-init" id="panel-nested" data-container-el="#panel-page">
+            <div class="block topo-painel skin" id="blocoMenu">
+               <div class="block-header">
+                  <div class="row" style="color: #fff;">
+                     <div class="col-20" style="font-size:28px;"><i class="mdi mdi-account-circle"></i></div>
+                     <div class="col-80"><strong id="menuNome">TS Control PDV</strong><br /><small id="nomeUsuario">Juan
+                           Santana</small></div>
+                  </div>
+               </div>
+            </div>
+            <!--<div class="block-title">Se quiser colocar uma divisória copie esse trecho e descomente</div>-->
+            <div class="list links-list no-hairlines no-hairlines-between no-chevron">
+               <ul>
+                  <li>
+                     <a href="/home/" class="panel-close">
+                        <div class="item-content panel-close">
+                           <div class="item-media" style="font-size:28px;"><i class="mdi mdi-home-outline"></i>                         
+                           </div>
+                           <div class="item-inner">Início</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/equipe/" class="panel-close">
+                        <div class="item-content class=" panel-close">
+                           <div class="item-media" style="font-size:28px;"><i class="mdi mdi-account-group"></i></div>
+                           <div class="item-inner">Equipe</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/categorias/" class="panel-close">
+                        <div class="item-content class=" panel-close">
+                           <div class="item-media" style="font-size:28px;"><i class="mdi mdi-package-variant"></i></div>
+                           <div class="item-inner">Produtos</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/meus-pedidos/" class="panel-close">
+                        <div class="item-content">
+                           <div class="item-media" style="font-size:28px;"><i class="mdi mdi-file-check"></i>
+                           </div>
+                           <div class="item-inner">Meus Pedidos</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/curso/" class="panel-close">
+                        <div class="item-content panel-close">
+                           <div class="item-media" style="font-size:28px;"><i class="mdi mdi-school"></i></div>
+                           <div class="item-inner">Cursos</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/link3/" class="panel-close">
+                        <div class="item-content ">
+                           <div class="item-media" style="font-size:28px;"><i class="mdi mdi-cog-outline"></i>
+                           </div>
+                           <div class="item-inner">Configurações</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <br>
+                     <center><img src="img/logo.png" width="130px"></center>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+         <!-- NAV TOPO-->
+         <div id="navTop" class="navbar display-none">
+            <div class="header">
+               <a href="#" class="link panel-open" data-panel="#panel-nested">
+                  <i class="mdi mdi-menu menu-icon"></i>
+               </a>
+               <div class="logo">
+                  <!-- <img src="https://static.wixstatic.com/media/6b6fa5_b8760403dc0b4362a708c875d0d2d9cc~mv2.png/v1/fill/w_133,h_139,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/am%C3%B3s%20final.png"
+                class="logo-amos" alt="Logo Amós"/> -->
+                AMÓS
+               </div>
+               <a href="#">
+                  <i class="mdi mdi-account-circle text-white" style="color: white;"></i>
+               </a>
+               <!-- <a href="/informacoes/" class="btn-header">
+                  <i class="mdi mdi-information-variant"></i>
+               </a> -->
+            </div>
+         </div>
+
+         <!-- <div id="navTop" class="header">
+            <div class="logo">
+            <img src="https://static.wixstatic.com/media/6b6fa5_b8760403dc0b4362a708c875d0d2d9cc~mv2.png/v1/fill/w_133,h_139,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/am%C3%B3s%20final.png"
+                class="logo-amos" alt="Logo Amós">
+            AMÓS
+            </div>
+            <div class="header-icons">
+            <div class="header-icon">
+                <i class="fas fa-bell"></i>
+                <div class="notification-badge">5</div>
+            </div>
+            <div class="header-icon">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            </div>
+        </div> -->
+
+         <!-- Initial Page, "data-name" contains page name -->
+         <div data-name="index" class="page color-theme-blue">
+
+            <!-- Scrollable page content -->
+            <div class="page-content"></div>
+         </div>
+      </div>
+   </div>
+   <!-- Path to Framework7 Library Bundle JS-->
+   <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+   <!-- jQuery -->
+   <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script src="lib/jwt-decode.min.js"></script>
+   <!-- Roteamento do app-->
+   <script type="text/javascript" src="js/routes.js"></script>
+   <script src="cordova.js"></script>
+</body>
+
+</html>

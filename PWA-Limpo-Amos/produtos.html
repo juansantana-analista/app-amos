@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <!--Ícones Estilo personalizado-->
+    <link rel="stylesheet" href="css/produtos.css">
+
+</head>
+
+<body>
+    
+    <!-- Initial Page, "data-name" contains page name -->
+    <div data-name="produtos" class="page color-theme-blue">
+
+        <div class="app-container">
+            <div class="header">
+                <div class="page-title">Produtos</div>
+                <div class="header-actions">
+                    <div class="header-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="header-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tabs-container">
+                <div class="tab active">Todos</div>
+                <div class="tab">Troncos</div>
+                <div class="tab">Portões</div>
+                <div class="tab">Equipamentos</div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Buscar produtos...">
+            </div>
+            
+            <div class="filter-bar">
+                <div class="filter-chip active">Todos</div>
+                <div class="filter-chip">Mais vendidos</div>
+                <div class="filter-chip">Menor preço</div>
+                <div class="filter-chip">Maior preço</div>
+                <div class="filter-chip">Estoque baixo</div>
+            </div>
+            
+            <div class="list-header" style="display: flex; justify-content: space-between; padding: 15px; align-items: center;">
+                <div style="font-size: 14px; color: #777;">12 produtos encontrados</div>
+                <div class="view-toggle">
+                    <div class="view-toggle-btn active" id="grid-view">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <div class="view-toggle-btn" id="list-view">
+                        <i class="fas fa-list"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grid View -->
+            <div class="product-grid" id="view-grid">
+                <div class="product-card" id="product-1">
+                    <div class="product-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="/api/placeholder/200/130" alt="Tronco Premium Amós">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-category">Troncos</div>
+                        <div class="product-name">Tronco Premium Amós</div>
+                        <div class="product-stock">Em estoque: 15 unidades</div>
+                        <div class="product-price">R$ 12.990,00</div>
+                        <div class="product-actions">
+                            <button class="product-btn btn-outline">Editar</button>
+                            <button class="product-btn btn-filled">Vender</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- List View -->
+            <div class="product-list" id="view-list" style="display: none;">
+                <div class="product-item" id="product-list-1">
+                    <div class="product-item-image">
+                        <img src="/api/placeholder/80/80" alt="Tronco Premium Amós">
+                    </div>
+                    <div class="product-item-details">
+                        <div class="product-item-row">
+                            <div class="product-item-category">Troncos</div>
+                            <div class="product-favorite">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="product-item-name">Tronco Premium Amós</div>
+                        <div class="product-price">R$ 12.990,00</div>
+                        <div class="product-item-stats">
+                            <div class="product-stat">
+                                <i class="fas fa-box"></i> 15 em estoque
+                            </div>
+                            <div class="product-stat">
+                                <i class="fas fa-shopping-cart"></i> 8 vendidos
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Details Sheet -->
+            <!-- <div class="product-details-sheet" id="product-details">
+                <div class="sheet-header">
+                    <div class="sheet-title">Detalhes do Produto</div>
+                    <div class="sheet-close" id="close-details">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                
+                <div class="product-detail-image">
+                    <img src="/api/placeholder/400/200" alt="Tronco Premium Amós">
+                </div>
+                
+                <div class="product-info-row">
+                    <div class="product-detail-category">Troncos</div>
+                    <div class="product-detail-name">Tronco Premium Amós</div>
+                    <div class="product-detail-price">R$ 12.990,00</div>
+                </div>
+                
+                <div class="product-meta">
+                    <div class="product-meta-item">
+                        <div class="meta-label">Estoque</div>
+                        <div class="meta-value">15 unidades</div>
+                    </div>
+                    <div class="product-meta-item">
+                        <div class="meta-label">SKU</div>
+                        <div class="meta-value">TPA-001</div>
+                    </div>
+                    <div class="product-meta-item">
+                        <div class="meta-label">Vendidos</div>
+                        <div class="meta-value">8 este mês</div>
+                    </div>
+                </div>
+                
+                <div class="product-description-title">Descrição do Produto</div>
+                <div class="product-description">
+                    O Tronco Premium Amós é fabricado com aço reforçado de alta resistência, projetado para oferecer máxima durabilidade e segurança no manejo do gado. Equipado com sistema de contenção lateral ajustável e plataforma antiderrapante, proporciona eficiência e conforto para o animal durante procedimentos veterinários.
+                    
+                    Inclui portão traseiro com trava automática e pescoçeira frontal com sistema de rápida abertura para emergências. Superfície tratada com pintura eletrostática que garante proteção contra corrosão e maior vida útil mesmo em ambientes externos.
+                </div>
+                
+                <div class="product-detail-actions">
+                    <button class="detail-action-btn btn-outline">Editar Produto</button>
+                    <button class="detail-action-btn btn-filled">Vender Agora</button>
+                </div>
+            </div> -->
+            
+            <!-- Bottom Nav Bar
+            <div class="nav-bar">
+                <div class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Início</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Vendas</span>
+                </div>
+                <div class="nav-item active">
+                    <i class="fas fa-box"></i>
+                    <span>Produtos</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-users"></i>
+                    <span>Clientes</span>
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>Perfil</span>
+                </div>
+            </div>
+            
+            Floating Action Button -->
+            <!-- <div class="floating-btn">
+                <i class="fas fa-plus"></i>
+            </div> -->
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="cordova.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.tab');
+            
+            tabs.forEach((tab) => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to current tab
+                    this.classList.add('active');
+                    
+                    // Here you would typically filter products by category
+                    console.log('Category selected: ' + this.textContent.trim());
+                });
+            });
+            
+            // Filter chips functionality
+            const filterChips = document.querySelectorAll('.filter-chip');
+            
+            filterChips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    // Remove active class from all chips
+                    filterChips.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked chip
+                    this.classList.add('active');
+                    
+                    // Here you would typically filter products
+                    console.log('Filter applied: ' + this.textContent.trim());
+                });
+            });
+            
+            // View toggle functionality
+            const gridViewBtn = document.getElementById('grid-view');
+            const listViewBtn = document.getElementById('list-view');
+            const gridView = document.getElementById('view-grid');
+            const listView = document.getElementById('view-list');
+            
+            gridViewBtn.addEventListener('click', function() {
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+                gridView.style.display = 'grid';
+                listView.style.display = 'none';
+            });
+            
+            listViewBtn.addEventListener('click', function() {
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+                listView.style.display = 'block';
+                gridView.style.display = 'none';
+            });
+            
+            // Product details sheet functionality
+            const productCard = document.getElementById('product-1');
+            const productListItem = document.getElementById('product-list-1');
+            const productDetails = document.getElementById('product-details');
+            const closeDetails = document.getElementById('close-details');
+            
+            productCard.addEventListener('click', function() {
+                productDetails.classList.add('active');
+            });
+            
+            productListItem.addEventListener('click', function() {
+                productDetails.classList.add('active');
+            });
+            
+            closeDetails.addEventListener('click', function() {
+                productDetails.classList.remove('active');
+            });
+            
+            // Bottom navigation functionality
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Here you would typically navigate to different sections of the app
+                    console.log('Navigation: ' + this.querySelector('span').textContent);
+                });
+            });
+            
+            // Floating button functionality
+            const floatingBtn = document.querySelector('.floating-btn');
+            
+            floatingBtn.addEventListener('click', function() {
+                // Here you would typically open a form to create a new product
+                console.log('Create new product');
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            
+            searchInput.addEventListener('input', function() {
+                // Here you would typically filter products based on search input
+                console.log('Searching for: ' + this.value);
+            });
+        });
+    </script>
+</body>
+
+</html>

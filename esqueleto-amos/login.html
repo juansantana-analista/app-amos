@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMÓS - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="farm-background"></div>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo-container">
+                <img src="https://static.wixstatic.com/media/6b6fa5_b8760403dc0b4362a708c875d0d2d9cc~mv2.png/v1/fill/w_133,h_139,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/am%C3%B3s%20final.png" class="logo-amos" alt="Logo Amós">
+                <div class="brand-name">AMÓS</div>
+            </div>
+            <div class="login-subtitle">Soluções para Pecuária</div>
+        </div>
+        
+        <div class="login-form">
+            <div class="form-group">
+                <label for="email">E-mail ou Usuário</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="email" class="form-control" placeholder="Seu e-mail ou nome de usuário">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" class="form-control" placeholder="Sua senha">
+                </div>
+            </div>
+            
+            <div class="forgot-password">
+                <a href="#">Esqueceu sua senha?</a>
+            </div>
+            
+            <button class="login-btn">Entrar</button>
+            
+            <div class="divider">
+                <span>ou</span>
+            </div>
+            
+            <div class="register-link">
+                Não possui uma conta? <a href="#">Cadastre-se aqui</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.querySelector('.login-btn');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            
+            loginBtn.addEventListener('click', function() {
+                if (emailInput.value && passwordInput.value) {
+                    // Aqui seria a lógica de autenticação
+                    // Apenas simulando redirecionamento
+                    alert('Login realizado com sucesso!');
+                    // Redirecionaria para a página principal
+                    // window.location.href = 'dashboard.html';
+                } else {
+                    alert('Por favor, preencha todos os campos!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

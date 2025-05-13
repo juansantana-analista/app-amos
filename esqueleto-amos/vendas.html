@@ -1,0 +1,608 @@
+    <div class="app-container">
+        <div class="header">
+            <div class="page-title">Vendas</div>
+            <div class="header-actions">
+                <div class="header-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="header-icon">
+                    <i class="fas fa-filter"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tabs-container">
+            <div class="tab active">Pedidos <span class="tab-badge">12</span></div>
+            <div class="tab">Estatísticas</div>
+            <div class="tab">Metas</div>
+        </div>
+        
+        <!-- TAB 1: PEDIDOS -->
+        <div id="tab-pedidos" class="tab-content">
+            <div class="sales-summary">
+                <div class="summary-title">Resumo de Vendas</div>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="summary-card-title">Vendas do Mês</div>
+                        <div class="summary-card-value">
+                            <i class="fas fa-dollar-sign"></i>
+                            R$ 42.850,00
+                        </div>
+                        <div class="summary-card-footer">
+                            <div class="trend-positive">
+                                <i class="fas fa-arrow-up trend-icon"></i>
+                                12.5%
+                            </div>
+                            <div class="trend-period">vs. mês anterior</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-card-title">Pedidos Realizados</div>
+                        <div class="summary-card-value">
+                            <i class="fas fa-shopping-cart"></i>
+                            18
+                        </div>
+                        <div class="summary-card-footer">
+                            <div class="trend-negative">
+                                <i class="fas fa-arrow-down trend-icon"></i>
+                                3.2%
+                            </div>
+                            <div class="trend-period">vs. mês anterior</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="filter-bar">
+                <div class="filter-chip active">Todos</div>
+                <div class="filter-chip">Pendentes</div>
+                <div class="filter-chip">Confirmados</div>
+                <div class="filter-chip">Entregues</div>
+                <div class="filter-chip">Cancelados</div>
+            </div>
+            
+            <div class="order-list">
+                <div class="list-header">
+                    <div class="list-title">Pedidos Recentes</div>
+                    <select class="sort-select">
+                        <option value="recent">Mais recentes</option>
+                        <option value="oldest">Mais antigos</option>
+                        <option value="highest">Maior valor</option>
+                        <option value="lowest">Menor valor</option>
+                    </select>
+                </div>
+                
+                <!-- Pedido 1 -->
+                <div class="order-item">
+                    <div class="order-header">
+                        <div class="order-id">#PED-2025-0238</div>
+                        <div class="order-status status-confirmed">Confirmado</div>
+                    </div>
+                    <div class="order-body">
+                        <div class="customer-info">
+                            <div class="customer-avatar">JS</div>
+                            <div class="customer-details">
+                                <div class="customer-name">João Silva - Fazenda Boi Forte</div>
+                                <div class="customer-address">São Paulo, SP</div>
+                            </div>
+                        </div>
+                        <div class="order-date">Criado em: 26/02/2025</div>
+                        <div class="order-products">
+                            <div class="product-summary">1x Tronco Premium Amós, 2x Portão Reforçado Duplo</div>
+                            <div class="product-count">3 itens no total</div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <div class="total-label">Valor total</div>
+                            <div class="total-value">R$ 23.970,00</div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="order-action-btn btn-outline">
+                                <i class="fas fa-eye btn-icon"></i> Detalhes
+                            </button>
+                            <button class="order-action-btn btn-filled">
+                                <i class="fas fa-check btn-icon"></i> Concluir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pedido 2 -->
+                <div class="order-item">
+                    <div class="order-header">
+                        <div class="order-id">#PED-2025-0237</div>
+                        <div class="order-status status-pending">Pendente</div>
+                    </div>
+                    <div class="order-body">
+                        <div class="customer-info">
+                            <div class="customer-avatar">MS</div>
+                            <div class="customer-details">
+                                <div class="customer-name">Maria Santos - Agropecuária Santos</div>
+                                <div class="customer-address">Ribeirão Preto, SP</div>
+                            </div>
+                        </div>
+                        <div class="order-date">Criado em: 25/02/2025</div>
+                        <div class="order-products">
+                            <div class="product-summary">1x Balança Digital 5000kg, 3x Trinco Soldado Alta Dureza</div>
+                            <div class="product-count">4 itens no total</div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <div class="total-label">Valor total</div>
+                            <div class="total-value">R$ 11.720,00</div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="order-action-btn btn-outline">
+                                <i class="fas fa-eye btn-icon"></i> Detalhes
+                            </button>
+                            <button class="order-action-btn btn-filled">
+                                <i class="fas fa-check btn-icon"></i> Confirmar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pedido 3 -->
+                <div class="order-item">
+                    <div class="order-header">
+                        <div class="order-id">#PED-2025-0235</div>
+                        <div class="order-status status-delivered">Entregue</div>
+                    </div>
+                    <div class="order-body">
+                        <div class="customer-info">
+                            <div class="customer-avatar">AF</div>
+                            <div class="customer-details">
+                                <div class="customer-name">Antônio Ferreira - Fazenda Boa Vista</div>
+                                <div class="customer-address">Uberaba, MG</div>
+                            </div>
+                        </div>
+                        <div class="order-date">Criado em: 21/02/2025</div>
+                        <div class="order-products">
+                            <div class="product-summary">1x Tronco Premium Amós</div>
+                            <div class="product-count">1 item no total</div>
+                        </div>
+                    </div>
+                    <div class="order-footer">
+                        <div class="order-total">
+                            <div class="total-label">Valor total</div>
+                            <div class="total-value">R$ 12.990,00</div>
+                        </div>
+                        <div class="order-actions">
+                            <button class="order-action-btn btn-outline">
+                                <i class="fas fa-eye btn-icon"></i> Detalhes
+                            </button>
+                            <button class="order-action-btn btn-outline">
+                                <i class="fas fa-copy btn-icon"></i> Duplicar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TAB 2: ESTATÍSTICAS -->
+        <div id="tab-estatisticas" class="tab-content" style="display: none;">
+            <div class="statistics-section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <div class="chart-title">Faturamento Mensal</div>
+                        <div class="chart-period">2025</div>
+                    </div>
+                    <div class="chart-content">
+                        <div class="chart-bar" style="height: 35%;">
+                            <div class="chart-bar-value">15k</div>
+                            <div class="chart-bar-label">Jan</div>
+                        </div>
+                        <div class="chart-bar" style="height: 65%;">
+                            <div class="chart-bar-value">28k</div>
+                            <div class="chart-bar-label">Fev</div>
+                        </div>
+                        <div class="chart-bar" style="height: 40%;">
+                            <div class="chart-bar-value">17k</div>
+                            <div class="chart-bar-label">Mar</div>
+                        </div>
+                        <div class="chart-bar" style="height: 80%;">
+                            <div class="chart-bar-value">35k</div>
+                            <div class="chart-bar-label">Abr</div>
+                        </div>
+                        <div class="chart-bar" style="height: 90%;">
+                            <div class="chart-bar-value">38k</div>
+                            <div class="chart-bar-label">Mai</div>
+                        </div>
+                        <div class="chart-bar" style="height: 100%;">
+                            <div class="chart-bar-value">42k</div>
+                            <div class="chart-bar-label">Jun</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="top-products">
+                    <div class="chart-header">
+                        <div class="chart-title">Produtos Mais Vendidos</div>
+                        <div class="chart-period">Este mês</div>
+                    </div>
+                    
+                    <div class="top-product-item">
+                        <div class="top-product-rank">1</div>
+                        <div class="top-product-image">
+                            <img src="/api/placeholder/45/45" alt="Tronco Premium">
+                        </div>
+                        <div class="top-product-details">
+                            <div class="top-product-name">Tronco Premium Amós</div>
+                            <div class="top-product-sold">8 unidades vendidas</div>
+                        </div>
+                        <div class="top-product-price">R$ 103.920</div>
+                    </div>
+                    
+                    <div class="top-product-item">
+                        <div class="top-product-rank">2</div>
+                        <div class="top-product-image">
+                            <img src="/api/placeholder/45/45" alt="Portão Reforçado">
+                        </div>
+                        <div class="top-product-details">
+                            <div class="top-product-name">Portão Reforçado Duplo</div>
+                            <div class="top-product-sold">12 unidades vendidas</div>
+                        </div>
+                        <div class="top-product-price">R$ 65.880</div>
+                    </div>
+                    
+                    <div class="top-product-item">
+                        <div class="top-product-rank">3</div>
+                        <div class="top-product-image">
+                            <img src="/api/placeholder/45/45" alt="Balança Digital">
+                        </div>
+                        <div class="top-product-details">
+                            <div class="top-product-name">Balança Digital 5000kg</div>
+                            <div class="top-product-sold">5 unidades vendidas</div>
+                        </div>
+                        <div class="top-product-price">R$ 39.250</div>
+                    </div>
+                    
+                    <div class="top-product-item">
+                        <div class="top-product-rank">4</div>
+                        <div class="top-product-image">
+                            <img src="/api/placeholder/45/45" alt="Trinco Soldado">
+                        </div>
+                        <div class="top-product-details">
+                            <div class="top-product-name">Trinco Soldado Alta Dureza</div>
+                            <div class="top-product-sold">15 unidades vendidas</div>
+                        </div>
+                        <div class="top-product-price">R$ 19.350</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<!-- TAB 3: METAS -->
+<div id="tab-metas" class="tab-content" style="display: none;">
+    <div class="statistics-section">
+        <div class="chart-container">
+            <div class="chart-header">
+                <div class="chart-title">Progresso das Metas</div>
+                <div class="chart-period">Fevereiro/2025</div>
+            </div>
+            <div style="margin: 20px 0;">
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <div style="font-size: 14px; font-weight: 500;">Meta de Vendas</div>
+                        <div style="font-size: 14px; font-weight: 500;">R$ 42.850 / R$ 50.000</div>
+                    </div>
+                    <div style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
+                        <div style="height: 100%; width: 85%; background-color: #5d2a0c; border-radius: 5px;"></div>
+                    </div>
+                    <div style="text-align: right; font-size: 12px; color: #777; margin-top: 3px;">85% concluído</div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <div style="font-size: 14px; font-weight: 500;">Meta de Pedidos</div>
+                        <div style="font-size: 14px; font-weight: 500;">18 / 25</div>
+                    </div>
+                    <div style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
+                        <div style="height: 100%; width: 72%; background-color: #5d2a0c; border-radius: 5px;"></div>
+                    </div>
+                    <div style="text-align: right; font-size: 12px; color: #777; margin-top: 3px;">72% concluído</div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <div style="font-size: 14px; font-weight: 500;">Meta de Novos Clientes</div>
+                        <div style="font-size: 14px; font-weight: 500;">3 / 10</div>
+                    </div>
+                    <div style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
+                        <div style="height: 100%; width: 30%; background-color: #5d2a0c; border-radius: 5px;"></div>
+                    </div>
+                    <div style="text-align: right; font-size: 12px; color: #777; margin-top: 3px;">30% concluído</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-header">
+                <div class="chart-title">Histórico de Metas</div>
+                <div class="chart-period">2025</div>
+            </div>
+            <div style="margin: 20px 0;">
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <div style="font-size: 14px; font-weight: 500;">Janeiro</div>
+                        <div style="font-size: 14px; font-weight: 500;">R$ 38.500 / R$ 45.000</div>
+                    </div>
+                    <div style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
+                        <div style="height: 100%; width: 85%; background-color: #5d2a0c; border-radius: 5px;"></div>
+                    </div>
+                    <div style="text-align: right; font-size: 12px; color: #777; margin-top: 3px;">85% concluído</div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <div style="font-size: 14px; font-weight: 500;">Dezembro</div>
+                        <div style="font-size: 14px; font-weight: 500;">R$ 62.300 / R$ 60.000</div>
+                    </div>
+                    <div style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
+                        <div style="height: 100%; width: 100%; background-color: #27ae60; border-radius: 5px;"></div>
+                    </div>
+                    <div style="text-align: right; font-size: 12px; color: #27ae60; margin-top: 3px;">103% concluído</div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <div style="font-size: 14px; font-weight: 500;">Novembro</div>
+                        <div style="font-size: 14px; font-weight: 500;">R$ 48.900 / R$ 55.000</div>
+                    </div>
+                    <div style="height: 10px; background-color: #f0f0f0; border-radius: 5px; overflow: hidden;">
+                        <div style="height: 100%; width: 89%; background-color: #5d2a0c; border-radius: 5px;"></div>
+                    </div>
+                    <div style="text-align: right; font-size: 12px; color: #777; margin-top: 3px;">89% concluído</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-header">
+                <div class="chart-title">Definir Nova Meta</div>
+            </div>
+            <div style="margin: 20px 0;">
+                <div style="margin-bottom: 15px;">
+                    <div style="font-size: 14px; font-weight: 500; margin-bottom: 5px;">Tipo de Meta</div>
+                    <select style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd; background-color: white;">
+                        <option value="vendas">Meta de Vendas</option>
+                        <option value="pedidos">Meta de Pedidos</option>
+                        <option value="clientes">Meta de Novos Clientes</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="font-size: 14px; font-weight: 500; margin-bottom: 5px;">Valor da Meta</div>
+                    <input type="text" placeholder="R$ 0,00" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="font-size: 14px; font-weight: 500; margin-bottom: 5px;">Período</div>
+                    <select style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd; background-color: white;">
+                        <option value="mar">Março/2025</option>
+                        <option value="abr">Abril/2025</option>
+                        <option value="mai">Maio/2025</option>
+                    </select>
+                </div>
+                
+                <button class="btn-create" style="width: 100%; margin-top: 10px;">
+                    <i class="fas fa-plus"></i> Criar Nova Meta
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Floating Action Button -->
+<div class="floating-btn">
+    <i class="fas fa-plus"></i>
+</div>
+
+</div>
+
+<script src="src/js/api.js"></script>
+<script src="src/js/vendas.js"></script>
+<script>
+    // Tab switching functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to current tab
+                this.classList.add('active');
+                
+                // Hide all tab contents
+                tabContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+                
+                // Show the selected tab content
+                if (index === 0) {
+                    document.getElementById('tab-pedidos').style.display = 'block';
+                } else if (index === 1) {
+                    document.getElementById('tab-estatisticas').style.display = 'block';
+                } else if (index === 2) {
+                    document.getElementById('tab-metas').style.display = 'block';
+                }
+            });
+        });
+        
+        // Initialize with first tab active
+        document.getElementById('tab-pedidos').style.display = 'block';
+        
+        // Filter chips functionality
+        const filterChips = document.querySelectorAll('.filter-chip');
+        
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', function() {
+                // Remove active class from all chips
+                filterChips.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked chip
+                this.classList.add('active');
+                
+                // Here you would typically filter the orders based on the selected status
+                // For this demo, we'll just show a message
+                console.log('Filter applied: ' + this.textContent.trim());
+            });
+        });
+        
+        // Bottom navigation functionality
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Remove active class from all items
+                navItems.forEach(i => i.classList.remove('active'));
+                
+                // Add active class to clicked item
+                this.classList.add('active');
+                
+                // Here you would typically navigate to different sections of the app
+                console.log('Navigation: ' + this.querySelector('span').textContent);
+            });
+        });
+        
+        // Sort select functionality
+        const sortSelect = document.querySelector('.sort-select');
+        
+        sortSelect.addEventListener('change', function() {
+            // Here you would typically sort the orders based on the selected option
+            console.log('Sort by: ' + this.value);
+        });
+        
+        // Order action buttons functionality
+        const actionButtons = document.querySelectorAll('.order-action-btn');
+        
+        actionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Here you would typically perform the action based on the button clicked
+                console.log('Action: ' + this.textContent.trim());
+            });
+        });
+        
+        // Floating button functionality
+        const floatingBtn = document.querySelector('.floating-btn');
+        
+        floatingBtn.addEventListener('click', function() {
+            // Here you would typically open a form to create a new order
+            console.log('Create new order');
+        });
+
+        function openDB() {
+            return new Promise((resolve, reject) => {
+                let request = indexedDB.open("MeuPWA_DB", 1);
+
+                request.onupgradeneeded = function (event) {
+                    let db = event.target.result;
+                    if (!db.objectStoreNames.contains("produtos")) {
+                        db.createObjectStore("produtos", { keyPath: "id" });
+                    }
+                };
+
+                request.onsuccess = function (event) {
+                    resolve(event.target.result);
+                };
+
+                request.onerror = function (event) {
+                    reject("Erro ao abrir o banco: " + event.target.errorCode);
+                };
+            });
+        }
+
+        async function fetchAndStoreProducts() {
+    try {
+        let response = await fetch("https://escritorio.g3pay.com.br/rest.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Basic 50119e057567b086d83fe5dd18336042ff2cf7bef3c24807bc55e34dbe5a"
+            },
+            body: JSON.stringify({
+                "class": "ProdutoVariacaoRest",
+                "method": "loadAll",
+                "limit": 100
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error(`Erro HTTP: ${response.status}`);
+        }
+
+        let jsonResponse = await response.json();
+
+        // Verifica se a resposta foi bem-sucedida e se há dados
+        if (jsonResponse.status !== "success" || !Array.isArray(jsonResponse.data)) {
+            throw new Error("Resposta inválida da API");
+        }
+
+        let produtos = jsonResponse.data.map(produto => ({
+            id: produto.id,
+            nome: produto.nome,
+            descricao: produto.descricao_app || produto.descricao,
+            preco: produto.preco,
+            preco_prazo: produto.preco_prazo,
+            preco_promocional: produto.promotional_price || produto.preco,
+            foto: produto.foto ? `https://escritorio.g3pay.com.br/${produto.foto}` : null,
+            estoque: produto.estoque,
+            categoria_id: produto.categoria_id
+        }));
+
+        let db = await openDB();
+        let tx = db.transaction("produtos", "readwrite");
+        let store = tx.objectStore("produtos");
+
+        produtos.forEach(produto => {
+            store.put(produto);
+        });
+
+        console.log("Produtos salvos no IndexedDB!");
+    } catch (error) {
+        console.error("Erro ao buscar produtos:", error);
+    }
+}
+
+
+
+        async function getOfflineProducts() {
+            let db = await openDB();
+            let tx = db.transaction("produtos", "readonly");
+            let store = tx.objectStore("produtos");
+
+            return new Promise((resolve, reject) => {
+                let request = store.getAll();
+                request.onsuccess = function () {
+                    resolve(request.result);
+                };
+                request.onerror = function () {
+                    reject("Erro ao recuperar produtos");
+                };
+            });
+        }
+
+        // Exibir os produtos
+        getOfflineProducts().then(produtos => {
+            console.log("Produtos Offline:", produtos);
+        });
+
+        window.addEventListener("load", async () => {
+            if (navigator.onLine) {
+                console.log('online');
+                await fetchAndStoreProducts(); // Atualiza quando online
+            } else {
+                console.log('offline');
+            }
+        });
+
+    });
+
+
+</script>

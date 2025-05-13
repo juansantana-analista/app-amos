@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Router</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="/" onclick="navigate(event, '/')">
+            <div class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </div>
+        </a>
+        <div class="nav-item">
+            <i class="fas fa-box"></i>
+            <span>Produtos</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Clientes</span>
+        </div>
+        <a href="/vendas" onclick="navigate(event, '/vendas')">
+            <div class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Vendas</span>
+            </div>
+        </a>
+        <div class="nav-item">
+            <i class="fas fa-ellipsis-h"></i>
+            <span>Mais</span>
+        </div>
+    </div>
+
+    <div id="app">Carregando...</div>
+
+    <script src="src/js/router.js"></script>
+    <script src="src/js/api.js"></script>
+</body>
+</html>
