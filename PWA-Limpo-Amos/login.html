@@ -10,7 +10,7 @@
   <!-- Color theme for statusbar (Android only) -->
   <meta name="theme-color" content="#8D51FF">
   <!-- Your app title -->
-  <title>G3 PAY</title>
+  <title>AMOS</title>
   <!-- Path to Framework7 Library Bundle CSS -->
   <link rel="stylesheet" href="lib/framework7-bundle.min.css">
   <!-- CSS PERSONALIZADO PARA MENU-->
@@ -19,22 +19,19 @@
   <link rel="stylesheet" href="css/materialdesignicons.min.css">
   <!-- Icones do Remix icon-->
   <link rel="stylesheet" href="css/remixicon/remixicon.css">
+
 </head>
 
 <body>
-  <!-- App root element -->
-  <div id="app">
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main">
       <!-- Initial Page, "data-name" contains page name -->
-      <div data-name="login" class="page color-theme-blue">
+      <div data-name="login" class="page">
         <!-- Navbar -->
         <!-- Scrollable page content -->
-        <div class="page-content">
+        <div class="page-content" style="padding-top: 200px; overflow: hidden;">
           <center>
-            <img src="img/logo.png" style="max-width:50%; padding:30px; margin-top: 100px;">
+            <img src="https://static.wixstatic.com/media/6b6fa5_b8760403dc0b4362a708c875d0d2d9cc~mv2.png/v1/fill/w_133,h_139,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/am%C3%B3s%20final.png" style="max-width:50%; padding:30px; margin-top: 200px;">
             <center>
-              <h3 class="title-logo"> PDV</h3>
+              <h3 class="title-logo"></h3>
             </center>
           </center>
           <div class="list no-hairlines">
@@ -61,13 +58,13 @@
             </form>
           </div>
           <div class="flex-100">
-            <button class="btn-large" id="signIn" style="margin: 10px;">
+            <button class="btn-large" id="signIn" style="margin-top: 30px;">
               ENTRAR
               <span class="mdi mdi-login"></span>
             </button>
           </div>
           <p>
-            <center><a href="#" id="forgotPassword" class="link text-title">Esqueceu sua senha?</a></center>
+            <center><a href="#" id="forgotPassword" class="link text-title" style="margin-bottom: 250px;">Esqueceu sua senha?</a></center>
           </p>
           <br>
 
@@ -117,8 +114,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
   <!-- Path to Framework7 Library Bundle JS-->
   <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
   <!-- jQuery -->

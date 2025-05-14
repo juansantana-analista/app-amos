@@ -1,3 +1,13 @@
+/* Estilos globais são mantidos */
+:root {
+    --branco: #ffff;
+    --gelo: #f1f1f1;
+    --roxo: #19c463;
+    --preto: #2a2a2a;
+    --roxo: #8D51FF;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,17 +20,17 @@ body {
     color: #333;
 }
 
-.app-container {
+/* Prefixando todos os seletores com .page[data-name="home"] para isolar os estilos */
+.page[data-name="home"] .app-container {
     max-width: 1000px;
     margin: 0 auto;
     background-color: white;
     min-height: 100vh;
     position: relative;
     padding-bottom: 70px;
-    margin-top: 15px;
 }
 
-.header {
+.page[data-name="home"] .header {
     background-color: #5d2a0c;
     color: white;
     padding: 15px;
@@ -32,32 +42,37 @@ body {
     z-index: 100;
 }
 
-.logo {
+.page[data-name="home"] .navbar {
+    background-color: #5d2a0c;
+    color: white;
+}
+
+.page[data-name="home"] .logo {
     font-size: 22px;
     font-weight: bold;
     display: flex;
     align-items: center;
 }
 
-.logo img {
+.page[data-name="home"] .logo img {
     height: 40px;
     margin-right: 10px;
     background-color: #ddd;
     border-radius: 50%;
 }
 
-.header-icons {
+.page[data-name="home"] .header-icons {
     display: flex;
     gap: 15px;
 }
 
-.header-icon {
+.page[data-name="home"] .header-icon {
     position: relative;
     cursor: pointer;
     color: white;
 }
 
-.notification-badge {
+.page[data-name="home"] .notification-badge {
     position: absolute;
     top: -5px;
     right: -5px;
@@ -72,7 +87,7 @@ body {
     justify-content: center;
 }
 
-.search-container {
+.page[data-name="home"] .search-container {
     padding: 15px;
     background-color: #f3f3f3;
     display: flex;
@@ -80,7 +95,7 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.search-box {
+.page[data-name="home"] .search-box {
     display: flex;
     flex: 1;
     background-color: white;
@@ -90,7 +105,7 @@ body {
     border: 1px solid #ddd;
 }
 
-.search-box input {
+.page[data-name="home"] .search-box input {
     flex: 1;
     border: none;
     outline: none;
@@ -98,11 +113,11 @@ body {
     font-size: 14px;
 }
 
-.search-box i {
+.page[data-name="home"] .search-box i {
     color: #777;
 }
 
-.filter-btn {
+.page[data-name="home"] .filter-btn {
     background-color: #5d2a0c;
     color: white;
     border: none;
@@ -116,7 +131,7 @@ body {
     cursor: pointer;
 }
 
-.status-overview {
+.page[data-name="home"] .status-overview {
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -124,7 +139,7 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.status-item {
+.page[data-name="home"] .status-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,18 +147,18 @@ body {
     flex: 1;
 }
 
-.status-value {
+.page[data-name="home"] .status-value {
     font-size: 22px;
     font-weight: bold;
     color: #5d2a0c;
 }
 
-.status-label {
+.page[data-name="home"] .status-label {
     font-size: 12px;
     color: #777;
 }
 
-.quick-actions {
+.page[data-name="home"] .quick-actions {
     padding: 15px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -152,7 +167,7 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.action-item {
+.page[data-name="home"] .action-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,7 +175,7 @@ body {
     cursor: pointer;
 }
 
-.action-icon {
+.page[data-name="home"] .action-icon {
     width: 50px;
     height: 50px;
     background-color: #f0e2d6;
@@ -173,19 +188,19 @@ body {
     font-size: 20px;
 }
 
-.action-label {
+.page[data-name="home"] .action-label {
     font-size: 12px;
     color: #333;
 }
 
-.section-header {
+.page[data-name="home"] .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 15px 10px;
 }
 
-.section-title {
+.page[data-name="home"] .section-title {
     font-size: 18px;
     font-weight: bold;
     color: #5d2a0c;
@@ -193,17 +208,17 @@ body {
     align-items: center;
 }
 
-.section-title i {
+.page[data-name="home"] .section-title i {
     margin-right: 8px;
 }
 
-.section-link {
+.page[data-name="home"] .section-link {
     font-size: 14px;
     color: #5d2a0c;
     text-decoration: none;
 }
 
-.carousel {
+.page[data-name="home"] .carousel {
     padding: 0 15px 15px;
     overflow-x: auto;
     display: flex;
@@ -211,11 +226,11 @@ body {
     scrollbar-width: none;
 }
 
-.carousel::-webkit-scrollbar {
+.page[data-name="home"] .carousel::-webkit-scrollbar {
     display: none;
 }
 
-.product-card {
+.page[data-name="home"] .product-card {
     min-width: 160px;
     background-color: white;
     border-radius: 10px;
@@ -224,15 +239,15 @@ body {
     border: 1px solid #eee;
 }
 
-.product-image img {
-max-width: 100%;
-max-height: 100%;
-object-fit: contain; /* Mantém a proporção sem cortar */
-width: 120px; /* Defina um tamanho fixo */
-height: 120px;
+.page[data-name="home"] .product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    width: 120px;
+    height: 120px;
 }
 
-.product-badge {
+.page[data-name="home"] .product-badge {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -243,11 +258,11 @@ height: 120px;
     border-radius: 3px;
 }
 
-.product-details {
+.page[data-name="home"] .product-details {
     padding: 10px;
 }
 
-.product-name {
+.page[data-name="home"] .product-name {
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 5px;
@@ -255,24 +270,24 @@ height: 120px;
     overflow: hidden;
 }
 
-.product-meta {
+.page[data-name="home"] .product-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 5px;
 }
 
-.product-price {
+.page[data-name="home"] .product-price {
     font-weight: bold;
     color: #5d2a0c;
 }
 
-.product-commission {
+.page[data-name="home"] .product-commission {
     font-size: 12px;
     color: #27ae60;
 }
 
-.opportunity-card {
+.page[data-name="home"] .opportunity-card {
     display: flex;
     padding: 15px;
     background-color: white;
@@ -282,7 +297,7 @@ height: 120px;
     border: 1px solid #eee;
 }
 
-.opportunity-icon {
+.page[data-name="home"] .opportunity-icon {
     width: 50px;
     height: 50px;
     background-color: #f0e2d6;
@@ -295,22 +310,22 @@ height: 120px;
     font-size: 20px;
 }
 
-.opportunity-details {
+.page[data-name="home"] .opportunity-details {
     flex: 1;
 }
 
-.opportunity-title {
+.page[data-name="home"] .opportunity-title {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.opportunity-desc {
+.page[data-name="home"] .opportunity-desc {
     font-size: 13px;
     color: #777;
     margin-bottom: 8px;
 }
 
-.opportunity-action {
+.page[data-name="home"] .opportunity-action {
     color: #5d2a0c;
     font-size: 13px;
     font-weight: bold;
@@ -318,56 +333,56 @@ height: 120px;
     align-items: center;
 }
 
-.opportunity-action i {
+.page[data-name="home"] .opportunity-action i {
     margin-left: 5px;
 }
 
-.calendar-section {
+.page[data-name="home"] .calendar-section {
     padding: 0 15px 15px;
 }
 
-.calendar-header {
+.page[data-name="home"] .calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.calendar-title {
+.page[data-name="home"] .calendar-title {
     font-weight: bold;
 }
 
-.calendar-nav {
+.page[data-name="home"] .calendar-nav {
     display: flex;
     gap: 10px;
 }
 
-.calendar-nav button {
+.page[data-name="home"] .calendar-nav button {
     background: none;
     border: none;
     cursor: pointer;
     color: #5d2a0c;
 }
 
-.calendar-days {
+.page[data-name="home"] .calendar-days {
     display: flex;
     justify-content: space-between;
 }
 
-.day-item {
+.page[data-name="home"] .day-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 40px;
 }
 
-.day-name {
+.page[data-name="home"] .day-name {
     font-size: 12px;
     color: #777;
     margin-bottom: 5px;
 }
 
-.day-number {
+.page[data-name="home"] .day-number {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -377,20 +392,20 @@ height: 120px;
     font-size: 14px;
 }
 
-.day-number.active {
+.page[data-name="home"] .day-number.active {
     background-color: #5d2a0c;
     color: white;
 }
 
-.day-number.has-event {
+.page[data-name="home"] .day-number.has-event {
     border: 2px solid #5d2a0c;
 }
 
-.event-list {
+.page[data-name="home"] .event-list {
     margin-top: 15px;
 }
 
-.event-item {
+.page[data-name="home"] .event-item {
     display: flex;
     padding: 10px;
     background-color: #f9f9f9;
@@ -398,29 +413,29 @@ height: 120px;
     margin-bottom: 10px;
 }
 
-.event-time {
+.page[data-name="home"] .event-time {
     width: 60px;
     font-size: 12px;
     color: #5d2a0c;
     font-weight: bold;
 }
 
-.event-info {
+.page[data-name="home"] .event-info {
     flex: 1;
 }
 
-.event-title {
+.page[data-name="home"] .event-title {
     font-weight: bold;
     font-size: 14px;
     margin-bottom: 3px;
 }
 
-.event-location {
+.page[data-name="home"] .event-location {
     font-size: 12px;
     color: #777;
 }
 
-.nav-bar {
+.page[data-name="home"] .nav-bar {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -435,7 +450,7 @@ height: 120px;
     z-index: 100;
 }
 
-.nav-item {
+.page[data-name="home"] .nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -444,16 +459,16 @@ height: 120px;
     cursor: pointer;
 }
 
-.nav-item.active {
+.page[data-name="home"] .nav-item.active {
     color: #5d2a0c;
 }
 
-.nav-item i {
+.page[data-name="home"] .nav-item i {
     font-size: 20px;
     margin-bottom: 3px;
 }
 
-.floating-btn {
+.page[data-name="home"] .floating-btn {
     position: fixed;
     bottom: 80px;
     right: 20px;

@@ -1,0 +1,587 @@
+.page[data-name="vendas"] * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page[data-name="vendas"] body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.page[data-name="vendas"] .header {
+    background-color: #5d2a0c; 
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.page[data-name="vendas"] .page-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.page[data-name="vendas"] .header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.page[data-name="vendas"] .header-icon {
+    cursor: pointer;
+}
+
+.page[data-name="vendas"] .tabs-container {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: white;
+    position: sticky;
+    top: 53px;
+    z-index: 90;
+}
+
+.page[data-name="vendas"] .tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #777;
+    position: relative;
+}
+
+.page[data-name="vendas"] .tab.active {
+    color: #5d2a0c;
+    font-weight: bold;
+}
+
+.page[data-name="vendas"] .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background-color: #5d2a0c;
+    border-radius: 2px 2px 0 0;
+}
+
+.page[data-name="vendas"] .tab-badge {
+    background-color: #5d2a0c;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.page[data-name="vendas"] .sales-summary {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.page[data-name="vendas"] .summary-title {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.page[data-name="vendas"] .summary-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.page[data-name="vendas"] .summary-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.page[data-name="vendas"] .summary-card-title {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.page[data-name="vendas"] .summary-card-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5d2a0c;
+    display: flex;
+    align-items: center;
+}
+
+.page[data-name="vendas"] .summary-card-value i {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.page[data-name="vendas"] .summary-card-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.page[data-name="vendas"] .trend-positive {
+    color: #27ae60;
+    display: flex;
+    align-items: center;
+}
+
+.page[data-name="vendas"] .trend-negative {
+    color: #e74c3c;
+    display: flex;
+    align-items: center;
+}
+
+.page[data-name="vendas"] .trend-neutral {
+    color: #777;
+}
+
+.page[data-name="vendas"] .trend-icon {
+    margin-right: 2px;
+}
+
+.page[data-name="vendas"] .trend-period {
+    color: #777;
+    margin-left: 5px;
+}
+
+.page[data-name="vendas"] .filter-bar {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.page[data-name="vendas"] .filter-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.page[data-name="vendas"] .filter-chip {
+    padding: 6px 12px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    font-size: 13px;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+.page[data-name="vendas"] .filter-chip.active {
+    background-color: #5d2a0c;
+    color: white;
+    border-color: #5d2a0c;
+}
+
+.page[data-name="vendas"] .order-list {
+    padding: 10px 15px;
+}
+
+.page[data-name="vendas"] .list-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.page[data-name="vendas"] .list-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.page[data-name="vendas"] .sort-select {
+    font-size: 13px;
+    padding: 5px 25px 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+    appearance: none;
+    position: relative;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.page[data-name="vendas"] .order-item {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.page[data-name="vendas"] .order-header {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.page[data-name="vendas"] .order-id {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.page[data-name="vendas"] .order-date {
+    font-size: 13px;
+    color: #777;
+}
+
+.page[data-name="vendas"] .order-status {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.page[data-name="vendas"] .status-pending {
+    background-color: #fff7e6;
+    color: #ff9800;
+}
+
+.page[data-name="vendas"] .status-confirmed {
+    background-color: #e6f7ff;
+    color: #1890ff;
+}
+
+.page[data-name="vendas"] .status-delivered {
+    background-color: #e6fff0;
+    color: #27ae60;
+}
+
+.page[data-name="vendas"] .status-cancelled {
+    background-color: #ffe6e6;
+    color: #e74c3c;
+}
+
+.page[data-name="vendas"] .order-body {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.page[data-name="vendas"] .customer-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.page[data-name="vendas"] .customer-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f0e2d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5d2a0c;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.page[data-name="vendas"] .customer-details {
+    flex: 1;
+}
+
+.page[data-name="vendas"] .customer-name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.page[data-name="vendas"] .customer-address {
+    font-size: 12px;
+    color: #777;
+}
+
+.page[data-name="vendas"] .order-products {
+    margin-top: 8px;
+}
+
+.page[data-name="vendas"] .product-summary {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.page[data-name="vendas"] .product-count {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.page[data-name="vendas"] .order-footer {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page[data-name="vendas"] .order-total {
+    display: flex;
+    flex-direction: column;
+}
+
+.page[data-name="vendas"] .total-label {
+    font-size: 12px;
+    color: #777;
+}
+
+.page[data-name="vendas"] .total-value {
+    font-weight: bold;
+    font-size: 16px;
+    color: #5d2a0c;
+}
+
+.page[data-name="vendas"] .order-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.page[data-name="vendas"] .order-action-btn {
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.page[data-name="vendas"] .btn-outline {
+    border: 1px solid #5d2a0c;
+    color: #5d2a0c;
+    background: none;
+}
+
+.page[data-name="vendas"] .btn-filled {
+    background-color: #5d2a0c;
+    color: white;
+    border: 1px solid #5d2a0c;
+}
+
+.page[data-name="vendas"] .btn-icon {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.page[data-name="vendas"] .statistics-section {
+    padding: 15px;
+}
+
+.page[data-name="vendas"] .chart-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+}
+
+.page[data-name="vendas"] .chart-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.page[data-name="vendas"] .chart-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.page[data-name="vendas"] .chart-period {
+    font-size: 13px;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page[data-name="vendas"] .chart-content {
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.page[data-name="vendas"] .chart-bar {
+    flex: 1;
+    background-color: #5d2a0c;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+}
+
+.page[data-name="vendas"] .chart-bar-value {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.page[data-name="vendas"] .chart-bar-label {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+.page[data-name="vendas"] .top-products {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.page[data-name="vendas"] .top-product-item {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.page[data-name="vendas"] .top-product-item:last-child {
+    border-bottom: none;
+}
+
+.page[data-name="vendas"] .top-product-rank {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #f0e2d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5d2a0c;
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.page[data-name="vendas"] .top-product-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page[data-name="vendas"] .top-product-details {
+    flex: 1;
+}
+
+.page[data-name="vendas"] .top-product-name {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.page[data-name="vendas"] .top-product-sold {
+    font-size: 12px;
+    color: #777;
+}
+
+.page[data-name="vendas"] .top-product-price {
+    font-weight: bold;
+    font-size: 14px;
+    color: #5d2a0c;
+}
+
+.page[data-name="vendas"] .no-records {
+    padding: 40px 0;
+    text-align: center;
+    color: #777;
+}
+
+.page[data-name="vendas"] .no-records i {
+    font-size: 40px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.page[data-name="vendas"] .no-records-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.page[data-name="vendas"] .no-records-subtext {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.page[data-name="vendas"] .btn-create {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #5d2a0c;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.page[data-name="vendas"] .btn-create i {
+    margin-right: 8px;
+}
+
+/* .page[data-name="vendas"] .nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 12px;
+box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+} */
+/* 
+.page[data-name="vendas"] .nav-bar-icon {
+font-size: 18px;
+color: #5d2a0c;
+cursor: pointer;
+}
+
+.page[data-name="vendas"] .nav-bar-icon.active {
+color: #27ae60;
+} */
+
+.page[data-name="vendas"] .page-footer {
+background-color: #f5f5f5;
+text-align: center;
+padding: 15px;
+font-size: 14px;
+color: #777;
+}
+
+.page[data-name="vendas"] .page-footer a {
+color: #5d2a0c;
+text-decoration: none;
+}

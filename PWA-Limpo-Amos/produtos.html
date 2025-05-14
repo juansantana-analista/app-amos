@@ -15,28 +15,35 @@
     <link rel="stylesheet" href="lib/framework7-bundle.min.css">
     <!--Ícones Material Design-->
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
-    <!--Ícones Estilo personalizado-->
-    <link rel="stylesheet" href="css/produtos.css">
-
+    
 </head>
 
 <body>
     
     <!-- Initial Page, "data-name" contains page name -->
     <div data-name="produtos" class="page color-theme-blue">
-
+        
+        <div class="navbar" style="color: white;">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="title ">1</div>
+            </div>
+        </div>
         <div class="app-container">
-            <div class="header">
-                <div class="page-title">Produtos</div>
-                <div class="header-actions">
+            <!-- Header -->
+            <!-- <div class="header">
+                <div class="logo">
+                AMÓS
+                </div>
+                <div class="header-icons">
                     <div class="header-icon">
-                        <i class="fas fa-search"></i>
+                        <i class="mdi mdi-bell"></i>
                     </div>
                     <div class="header-icon">
-                        <i class="fas fa-filter"></i>
+                        <i class="mdi mdi-account-circle"></i>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             <div class="tabs-container">
                 <div class="tab active">Todos</div>
@@ -61,10 +68,10 @@
                 <div style="font-size: 14px; color: #777;">12 produtos encontrados</div>
                 <div class="view-toggle">
                     <div class="view-toggle-btn active" id="grid-view">
-                        <i class="fas fa-th"></i>
+                        <i class="mdi mdi-grid"></i>
                     </div>
                     <div class="view-toggle-btn" id="list-view">
-                        <i class="fas fa-list"></i>
+                        <i class="mdi mdi-format-list-bulleted"></i>
                     </div>
                 </div>
             </div>
@@ -73,10 +80,10 @@
             <div class="product-grid" id="view-grid">
                 <div class="product-card" id="product-1">
                     <div class="product-favorite">
-                        <i class="far fa-heart"></i>
+                        <i class="mdi mdi-heart-outline"></i>
                     </div>
                     <div class="product-image">
-                        <img src="/api/placeholder/200/130" alt="Tronco Premium Amós">
+                        <img src="https://static.wixstatic.com/media/787086_c6685dc8cfb545c4a4987606bd48d58d~mv2.png/v1/fill/w_565,h_317,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/787086_c6685dc8cfb545c4a4987606bd48d58d~mv2.png" alt="Tronco Premium Amós">
                     </div>
                     <div class="product-details">
                         <div class="product-category">Troncos</div>
@@ -95,23 +102,23 @@
             <div class="product-list" id="view-list" style="display: none;">
                 <div class="product-item" id="product-list-1">
                     <div class="product-item-image">
-                        <img src="/api/placeholder/80/80" alt="Tronco Premium Amós">
+                        <img src="https://static.wixstatic.com/media/787086_c6685dc8cfb545c4a4987606bd48d58d~mv2.png/v1/fill/w_565,h_317,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/787086_c6685dc8cfb545c4a4987606bd48d58d~mv2.png" alt="Tronco Premium Amós">
                     </div>
                     <div class="product-item-details">
                         <div class="product-item-row">
                             <div class="product-item-category">Troncos</div>
                             <div class="product-favorite">
-                                <i class="far fa-heart"></i>
+                                <i class="mdi mdi-heart-outline"></i>
                             </div>
                         </div>
                         <div class="product-item-name">Tronco Premium Amós</div>
                         <div class="product-price">R$ 12.990,00</div>
                         <div class="product-item-stats">
                             <div class="product-stat">
-                                <i class="fas fa-box"></i> 15 em estoque
+                                <i class="mdi mdi-package"></i> 15 em estoque
                             </div>
                             <div class="product-stat">
-                                <i class="fas fa-shopping-cart"></i> 8 vendidos
+                                <i class="mdi mdi-cart"></i> 8 vendidos
                             </div>
                         </div>
                     </div>
@@ -119,16 +126,16 @@
             </div>
             
             <!-- Product Details Sheet -->
-            <!-- <div class="product-details-sheet" id="product-details">
+            <div class="product-details-sheet" id="product-details">
                 <div class="sheet-header">
                     <div class="sheet-title">Detalhes do Produto</div>
                     <div class="sheet-close" id="close-details">
-                        <i class="fas fa-times"></i>
+                        <i class="mdi mdi-close"></i>
                     </div>
                 </div>
                 
                 <div class="product-detail-image">
-                    <img src="/api/placeholder/400/200" alt="Tronco Premium Amós">
+                    <img src="https://static.wixstatic.com/media/787086_c6685dc8cfb545c4a4987606bd48d58d~mv2.png/v1/fill/w_565,h_317,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/787086_c6685dc8cfb545c4a4987606bd48d58d~mv2.png" alt="Tronco Premium Amós">
                 </div>
                 
                 <div class="product-info-row">
@@ -163,7 +170,7 @@
                     <button class="detail-action-btn btn-outline">Editar Produto</button>
                     <button class="detail-action-btn btn-filled">Vender Agora</button>
                 </div>
-            </div> -->
+            </div>
             
             <!-- Bottom Nav Bar
             <div class="nav-bar">

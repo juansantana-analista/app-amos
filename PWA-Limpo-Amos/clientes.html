@@ -17,36 +17,324 @@
     <link rel="stylesheet" href="css/personalizado.css">
     <!--Ícones Material Design-->
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    
+    <link rel="stylesheet" href="css/clientes.css">
+
 
 
 </head>
 
 <body>
-    <!-- App root element -->
-    <div id="app">
+<div data-name="clientes" class="page">
 
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-            <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="clientes" class="page">
+    <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="title ">Link 2</div>
+            </div>
+        </div>
 
-                <!-- Top Navbar -->
-                <div class="navbar">
-                    <div class="navbar-bg"></div>
-                    <div class="navbar-inner justify-content-center">
-                        <div class="title ">Link 3</div>
+    <div class="app-container">
+
+        <!-- <div class="header">
+            <div class="page-title">Clientes</div>
+            <div class="header-actions">
+                <div class="header-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="header-icon">
+                    <i class="fas fa-filter"></i>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="header">
+            <div class="logo">
+            AMÓS
+            </div>
+            <div class="header-icons">
+                <div class="header-icon">
+                    <i class="mdi mdi-bell"></i>
+                </div>
+                <div class="header-icon">
+                    <i class="mdi mdi-account-circle"></i>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="tabs-container">
+            <div class="tab active">Todos</div>
+            <div class="tab">Pecuaristas</div>
+            <div class="tab">Haras</div>
+            <div class="tab">Fazendas</div>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar clientes...">
+        </div>
+        
+        <div class="filter-bar">
+            <div class="filter-chip active">Todos</div>
+            <div class="filter-chip">Maior compra</div>
+            <div class="filter-chip">Recentes</div>
+            <div class="filter-chip">Frequentes</div>
+            <div class="filter-chip">Ativos</div>
+        </div>
+        
+        <div class="list-header" style="display: flex; justify-content: space-between; padding: 15px; align-items: center;">
+            <div style="font-size: 14px; color: #777;">1 cliente encontrado</div>
+            <div class="view-toggle">
+                <div class="view-toggle-btn active" id="grid-view">
+                    <i class="mdi mdi-grid"></i>
+                </div>
+                <div class="view-toggle-btn" id="list-view">
+                    <i class="mdi mdi-format-list-bulleted"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Grid View -->
+        <div class="client-grid" id="view-grid">
+            <div class="client-card" id="client-1">
+                <div class="client-favorite">
+                    <i class="mdi mdi-star"></i>
+                </div>
+                <div class="client-image">
+                    <div class="client-avatar">
+                        <i class="mdi mdi-account"></i>
                     </div>
                 </div>
-
-                <!-- Scrollable page content -->
-                <div class="page-content">
-                    <div class="block">
-                        Clientes
+                <div class="client-details">
+                    <div class="client-type">Pecuarista</div>
+                    <div class="client-name">João Silva Agropecuária</div>
+                    <div class="client-info">Belo Horizonte, MG</div>
+                    <div class="client-status">Cliente ativo</div>
+                    <div class="client-actions">
+                        <button class="client-btn btn-outline">Perfil</button>
+                        <button class="client-btn btn-filled">Contato</button>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- List View -->
+        <div class="client-list" id="view-list" style="display: none;">
+            <div class="client-item" id="client-list-1">
+                <div class="client-item-avatar">
+                    <i class="mdi mdi-account"></i>
+                </div>
+                <div class="client-item-details">
+                    <div class="client-item-row">
+                        <div class="client-item-type">Pecuarista</div>
+                        <div class="client-favorite">
+                            <i class="mdi mdi-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-item-name">João Silva Agropecuária</div>
+                    <div class="client-info">Belo Horizonte, MG</div>
+                    <div class="client-item-stats">
+                        <div class="client-stat">
+                            <i class="mdi mdi-cart"></i> 3 compras
+                        </div>
+                        <div class="client-stat">
+                            <i class="mdi mdi-calendar-month"></i> Desde Set/2023
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Client Details Sheet -->
+        <div class="client-details-sheet" id="client-details">
+            <div class="sheet-header">
+                <div class="sheet-title">Detalhes do Cliente</div>
+                <div class="sheet-close" id="close-details">
+                    <i class="mdi mdi-close"></i>
+                </div>
+            </div>
+            
+            <div class="client-detail-avatar">
+                <i class="mdi mdi-account"></i>
+            </div>
+            
+            <div class="client-info-row">
+                <div class="client-detail-type">Pecuarista</div>
+                <div class="client-detail-name">João Silva Agropecuária</div>
+            </div>
+            
+            <div class="action-section">
+                <div class="action-item">
+                    <div class="action-icon">
+                        <i class="mdi mdi-phone"></i>
+                    </div>
+                    <div class="action-label">Ligar</div>
+                </div>
+                <div class="action-item">
+                    <div class="action-icon">
+                        <i class="mdi mdi-email"></i>
+                    </div>
+                    <div class="action-label">Email</div>
+                </div>
+                <div class="action-item">
+                    <div class="action-icon">
+                        <i class="mdi mdi-whatsapp"></i>
+                    </div>
+                    <div class="action-label">WhatsApp</div>
+                </div>
+                <div class="action-item">
+                    <div class="action-icon">
+                        <i class="mdi mdi-map-marker"></i>
+                    </div>
+                    <div class="action-label">Visitar</div>
+                </div>
+            </div>
+            
+            <div class="client-info-section">
+                <div class="client-info-title">Informações de Contato</div>
+                
+                <div class="client-info-item">
+                    <div class="client-info-icon">
+                        <i class="mdi mdi-phone"></i>
+                    </div>
+                    <div class="client-info-content">
+                        <div class="client-info-label">Telefone</div>
+                        <div class="client-info-value">(31) 99876-5432</div>
+                    </div>
+                </div>
+                
+                <div class="client-info-item">
+                    <div class="client-info-icon">
+                        <i class="mdi mdi-email"></i>
+                    </div>
+                    <div class="client-info-content">
+                        <div class="client-info-label">Email</div>
+                        <div class="client-info-value">contato@joaosilva.com.br</div>
+                    </div>
+                </div>
+                
+                <div class="client-info-item">
+                    <div class="client-info-icon">
+                        <i class="mdi mdi-map-marker"></i>
+                    </div>
+                    <div class="client-info-content">
+                        <div class="client-info-label">Endereço</div>
+                        <div class="client-info-value">Rodovia BR 040, km 456, Belo Horizonte, MG</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="client-info-section">
+                <div class="client-info-title">Informações Adicionais</div>
+                
+                <div class="client-info-item">
+                    <div class="client-info-icon">
+                        <i class="mdi mdi-card-account-details"></i>
+                    </div>
+                    <div class="client-info-content">
+                        <div class="client-info-label">CNPJ</div>
+                        <div class="client-info-value">12.345.678/0001-90</div>
+                    </div>
+                </div>
+                
+                <div class="client-info-item">
+                    <div class="client-info-icon">
+                        <i class="mdi mdi-calendar-month"></i>
+                    </div>
+                    <div class="client-info-content">
+                        <div class="client-info-label">Cliente desde</div>
+                        <div class="client-info-value">20 de Setembro de 2023</div>
+                    </div>
+                </div>
+                
+                <div class="client-info-item">
+                    <div class="client-info-icon">
+                        <i class="mdi mdi-currency-usd"></i>
+                    </div>
+                    <div class="client-info-content">
+                        <div class="client-info-label">Total em compras</div>
+                        <div class="client-info-value">R$ 45.970,00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="client-info-section">
+                <div class="client-info-title">Histórico de Compras</div>
+                
+                <div class="client-purchase-history">
+                    <div class="purchase-item">
+                        <div class="purchase-title">
+                            <div class="purchase-name">Tronco Premium Amós</div>
+                            <div class="purchase-date">12/02/2024</div>
+                        </div>
+                        <div class="purchase-value">R$ 12.990,00</div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class="purchase-title">
+                            <div class="purchase-name">Portão Lateral Deluxe</div>
+                            <div class="purchase-date">05/01/2024</div>
+                        </div>
+                        <div class="purchase-value">R$ 8.980,00</div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class="purchase-title">
+                            <div class="purchase-name">Equipamentos de Contenção</div>
+                            <div class="purchase-date">14/11/2023</div>
+                        </div>
+                        <div class="purchase-value">R$ 24.000,00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="client-detail-actions">
+                <button class="detail-action-btn btn-outline">Editar Cliente</button>
+                <button class="detail-action-btn btn-filled">Nova Venda</button>
+            </div>
+        </div>
+        
+        <!-- Bottom Nav Bar -->
+        <!-- <div class="nav-bar">
+            <div class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Início</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Vendas</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-box"></i>
+                <span>Produtos</span>
+            </div>
+            <div class="nav-item active">
+                <i class="fas fa-users"></i>
+                <span>Clientes</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Perfil</span>
+            </div>
+        </div> -->
+        
+        <!-- Floating Action Button -->
+        <!-- <div class="floating-btn">
+            <i class="fas fa-plus"></i>
+        </div> -->
+        <!-- Top Navbar -->
+        <!-- <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner justify-content-center">
+                <div class="title ">Link 3</div>
+            </div>
+        </div> -->
+        
+        <!-- Scrollable page content -->
+        <!-- <div class="page-content">
+            <div class="block">
+                Clientes
+            </div>
+        </div> -->
     </div>
+</div>
     <!-- Path to Framework7 Library Bundle JS-->
     <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
 	<!-- jQuery -->
@@ -54,6 +342,111 @@
     <!-- Roteamento do app-->
     <script type="text/javascript" src="js/routes.js"></script>
     <script src="cordova.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.tab');
+            
+            tabs.forEach((tab) => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    
+                    // Add active class to current tab
+                    this.classList.add('active');
+                    
+                    // Here you would typically filter clients by category
+                    console.log('Categoria selecionada: ' + this.textContent.trim());
+                });
+            });
+            
+            // Filter chips functionality
+            const filterChips = document.querySelectorAll('.filter-chip');
+            
+            filterChips.forEach(chip => {
+                chip.addEventListener('click', function() {
+                    // Remove active class from all chips
+                    filterChips.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked chip
+                    this.classList.add('active');
+                    
+                    // Here you would typically filter clients
+                    console.log('Filtro aplicado: ' + this.textContent.trim());
+                });
+            });
+            
+            // View toggle functionality
+            const gridViewBtn = document.getElementById('grid-view');
+            const listViewBtn = document.getElementById('list-view');
+            const gridView = document.getElementById('view-grid');
+            const listView = document.getElementById('view-list');
+            
+            gridViewBtn.addEventListener('click', function() {
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+                gridView.style.display = 'grid';
+                listView.style.display = 'none';
+            });
+            
+            listViewBtn.addEventListener('click', function() {
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+                listView.style.display = 'block';
+                gridView.style.display = 'none';
+            });
+            
+            // Client details sheet functionality
+            const clientCard = document.getElementById('client-1');
+            const clientListItem = document.getElementById('client-list-1');
+            const clientDetails = document.getElementById('client-details');
+            const closeDetails = document.getElementById('close-details');
+            
+            clientCard.addEventListener('click', function() {
+                clientDetails.classList.add('active');
+            });
+            
+            clientListItem.addEventListener('click', function() {
+                clientDetails.classList.add('active');
+            });
+            
+            closeDetails.addEventListener('click', function() {
+                clientDetails.classList.remove('active');
+            });
+            
+            // Bottom navigation functionality
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(i => i.classList.remove('active'));
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Here you would typically navigate to different sections of the app
+                    console.log('Navigation: ' + this.querySelector('span').textContent);
+                });
+            });
+            
+            // Floating button functionality
+            const floatingBtn = document.querySelector('.floating-btn');
+            
+            floatingBtn.addEventListener('click', function() {
+                // Here you would typically open a form to create a new product
+                console.log('Create new product');
+            });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-input');
+            
+            searchInput.addEventListener('input', function() {
+                // Here you would typically filter products based on search input
+                console.log('Searching for: ' + this.value);
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,270 @@
+/* Estilo principal para a tela de login do AMÓS */
+
+/* Configurações de cores de tema e base */
+:root {
+  --theme-color: #6D2A00;
+  --theme-color-dark: #5a2200;
+  --theme-color-light: #853300;
+  --background-color: #f5f5f5;
+  --text-color: #333333;
+  --border-color: #E0E0E0;
+  --input-background: #FAFAFA;
+  --f7-label-focused-text-color: none;
+  --f7-input-focused-border-color: none;
+  --f7-input-placeholder-color: none;
+  --f7-input-item-bg-color: none;
+  --f7-input-border-color: none;
+  --f7-input-clear-button-color: none;
+  --f7-input-outline-border-color: none;
+  --f7-input-text-color: none;
+  --f7-label-text-color: none;
+}
+
+/* Estilos gerais */
+.page[data-name="login"] {
+  background-color: var(--background-color);
+}
+
+/* Configurações para centralizar o conteúdo da tela de login */
+.page[data-name="login"] .page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+/* Logo centralizado na tela de login */
+.page[data-name="login"] .page-content center img {
+  max-width: 150px !important;
+  padding: 10px !important;
+  margin-top: 0 !important;
+}
+
+/* Título e logo */
+.page[data-name="login"] .title-logo {
+  color: var(--theme-color);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilização do formulário de login */
+.page[data-name="login"] .list.no-hairlines {
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Campos de formulário */
+.page[data-name="login"] .item-content.item-input {
+  padding-left: 0;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.page[data-name="login"] .item-inner {
+  padding-right: 0 !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+.page[data-name="login"] .item-title.item-label {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.page[data-name="login"] .item-input-wrap input {
+  height: 48px;
+  font-size: 16px;
+  background-color: var(--input-background) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  padding: 0 15px !important;
+  box-sizing: border-box;
+}
+
+.page[data-name="login"] .item-inner {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.page[data-name="login"] .item-inner:after {
+  display: none !important;
+}
+
+.page[data-name="login"] .item-input-wrap {
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.page[data-name="login"] .item-input-wrap:after {
+  display: none !important;
+}
+
+/* Botão de login */
+.page[data-name="login"] .flex-100 {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.page[data-name="login"] .btn-large {
+  width: 100%;
+  height: 50px;
+  background-color: var(--theme-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+
+.page[data-name="login"] .btn-large:hover {
+  background-color: var(--theme-color-dark);
+}
+
+.page[data-name="login"] .btn-large .mdi {
+  font-size: 20px;
+}
+
+/* Link de recuperação de senha */
+.page[data-name="login"] .link.text-title {
+  color: var(--theme-color);
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.page[data-name="login"] .link.text-title:hover {
+  text-decoration: underline;
+}
+
+/* Navbar na tela de login */
+/* .page[data-name="login"] .navbar.tema.no-shadow {
+  background-color: var(--theme-color);
+  color: white;
+}
+
+.page[data-name="login"] .navbar.tema .navbar-inner {
+  background-color: var(--theme-color);
+}
+
+.page[data-name="login"] .navbar.tema .link {
+  color: white;
+}
+
+.page[data-name="login"] .navbar.tema .title {
+  color: white;
+  font-weight: 500;
+} */
+
+.page[data-name="login"] .block-title {
+  color: var(--theme-color) !important;
+  font-size: 18px;
+}
+
+/* Campo de código recebido */
+.page[data-name="login"] #codigoRecebido {
+  height: 50px;
+  background-color: var(--input-background) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.page[data-name="login"] .button.button-big.button-round.button-fill.btnskin {
+  background-color: var(--theme-color);
+  color: white;
+  border-radius: 8px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Logo */
+.page[data-name="login"] .page-content center {
+  margin-bottom: 30px;
+  display: block;
+  text-align: center;
+}
+
+.page[data-name="login"] .page-content center img {
+  max-width: 120px !important;
+  margin-top: 60px !important;
+  padding: 0 !important;
+}
+
+/* Card de login */
+.page[data-name="login"] .list.no-hairlines {
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.page[data-name="login"] input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Remove fundo azul claro dos wrappers */
+.page[data-name="login"] .item-input-wrap {
+  background-color: white !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Remove fundo azul da div acima do input */
+.page[data-name="login"] .item-inner {
+  background-color: white !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* Remove linhas automáticas adicionadas por Framework7 */
+.page[data-name="login"] .item-input-wrap:after,
+.page[data-name="login"] .item-inner:after {
+  display: none !important;
+}
+
+/* Estiliza o input */
+.page[data-name="login"] .item-input-wrap input {
+  background-color: #ffffff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  height: 48px !important;
+  padding: 10px 15px !important;
+  box-shadow: none !important;
+}
+
+.page[data-name="login"] input:focus {
+  outline: none;
+  border-color: #a52a2a;
+  color: black;
+}
+
+.navbar {
+  background-color: #5a2200;
+}
