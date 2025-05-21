@@ -20,12 +20,23 @@
     
     <link rel="stylesheet" href="css/clientes.css">
 
-
-
 </head>
 
 <body>
 <div data-name="clientes" class="page">
+
+
+    <div class="fab fab-extended fab-right-bottom" style="margin-bottom: 30%;">
+            <a class="sheet-open" data-sheet=".demo-sheet">
+            <i class="mdi mdi-account-plus"></i>
+            <!-- <div class="fab-text">Create</div> -->
+            </a>
+        </div>
+
+    <div class="page-content">
+
+    <!-- INSERIR SEARCHBAR AQUI -->
+
 
     <div class="navbar custom-navbar">
             <div class="navbar-bg"></div>
@@ -37,7 +48,7 @@
             </div>
         </div>
 
-    <div class="app-container">
+    <div class="app-container" >
 
         <!-- <div class="header">
             <div class="page-title">Clientes</div>
@@ -65,27 +76,27 @@
             </div>
         </div> -->
         
-        <div class="tabs-container">
+        <!-- <div class="tabs-container">
             <div class="tab active">Todos</div>
             <div class="tab">Pecuaristas</div>
             <div class="tab">Haras</div>
             <div class="tab">Fazendas</div>
-        </div>
+        </div> -->
         
-        <div class="search-bar">
+        <!-- <div class="search-bar">
             <input type="text" class="search-input" placeholder="Buscar clientes...">
-        </div>
+        </div> -->
         
-        <div class="filter-bar">
-            <div class="filter-chip active">Todos</div>
+        <!-- <div class="filter-bar"> -->
+            <!-- <div class="filter-chip active">Todos</div>
             <div class="filter-chip">Maior compra</div>
             <div class="filter-chip">Recentes</div>
             <div class="filter-chip">Frequentes</div>
-            <div class="filter-chip">Ativos</div>
-        </div>
+            <div class="filter-chip">Ativos</div> -->
+        <!-- </div> -->
         
         <div class="list-header" style="display: flex; justify-content: space-between; padding: 15px; align-items: center;">
-            <div style="font-size: 14px; color: #777;">1 cliente encontrado</div>
+            <div id="clientes-contador" style="font-size: 14px; color: #777;">1 cliente encontrado</div>
             <div class="view-toggle">
                 <div class="view-toggle-btn active" id="grid-view">
                     <i class="mdi mdi-grid"></i>
@@ -95,13 +106,39 @@
                 </div>
             </div>
         </div>
+
+
         
         <!-- Grid View -->
-        <div class="client-grid" id="view-grid">
-            <div class="client-card" id="client-1">
-                <div class="client-favorite">
+        <!-- <div class="client-grid" id="view-grid">
+            <div class="client-card" id="client-1"> -->
+                <!-- <div class="client-favorite">
                     <i class="mdi mdi-star"></i>
+                </div> -->
+                <!-- <div class="client-image">
+                    <div class="client-avatar">
+                        <i class="mdi mdi-account"></i>
+                    </div>
                 </div>
+                <div class="client-details">
+                    <div class="client-type">Pecuarista</div>
+                    <div class="client-name">João Silva Agropecuária</div>
+                    <div class="client-info">Belo Horizonte, MG</div>
+                    <div class="client-status">Cliente ativo</div>
+                    <div class="client-actions">
+                        <button class="button button-fill sheet-open" data-sheet=".perfil-sheet">
+                            Perfil
+                        </button>
+                        <button class="button button-tonal sheet-open" data-sheet=".fazendas-sheet">
+                            Fazendas
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="grid grid-cols-2 grid-gap" style="padding: 10px;">
+            <!-- <div class="client-card" id="client-1">
                 <div class="client-image">
                     <div class="client-avatar">
                         <i class="mdi mdi-account"></i>
@@ -113,12 +150,20 @@
                     <div class="client-info">Belo Horizonte, MG</div>
                     <div class="client-status">Cliente ativo</div>
                     <div class="client-actions">
-                        <button class="client-btn btn-outline">Perfil</button>
-                        <button class="client-btn btn-filled">Contato</button>
+                        <button class="button button-fill sheet-open" data-sheet=".perfil-sheet">
+                            Perfil
+                        </button>
+                        <button class="button button-tonal sheet-open" data-sheet=".fazendas-sheet">
+                            Fazendas
+                        </button>
                     </div>
-                </div>
+                </div> -->
             </div>
+           
         </div>
+
+
+
         
         <!-- List View -->
         <div class="client-list" id="view-list" style="display: none;">
@@ -148,7 +193,7 @@
         </div>
         
         <!-- Client Details Sheet -->
-        <div class="client-details-sheet" id="client-details">
+        <!-- <div class="client-details-sheet" id="client-details">
             <div class="sheet-header">
                 <div class="sheet-title">Detalhes do Cliente</div>
                 <div class="sheet-close" id="close-details">
@@ -289,10 +334,14 @@
             </div>
             
             <div class="client-detail-actions">
-                <button class="detail-action-btn btn-outline">Editar Cliente</button>
-                <button class="detail-action-btn btn-filled">Nova Venda</button>
+                <a class="detail-action-btn btn-outline sheet-open" data-sheet=".demo-sheet">
+                    Editar Cliente
+                </a>
+                <a class="detail-action-btn btn-filled sheet-open" data-sheet=".demo-sheet">
+                    Nova Venda
+                </a>
             </div>
-        </div>
+        </div> -->
         
         <!-- Bottom Nav Bar -->
         <!-- <div class="nav-bar">
@@ -319,9 +368,340 @@
         </div> -->
         
         <!-- Floating Action Button -->
-        <!-- <div class="floating-btn">
-            <i class="fas fa-plus"></i>
+
+        <!-- <div class="fab fab-right-bottom" style="margin-bottom: 80px;">
+            <a>
+            <i class="icon f7-icons if-not-md">plus</i>
+            <i class="icon f7-icons if-not-md">xmark</i>
+            <i class="icon material-icons md-only">add</i>
+            <i class="icon material-icons md-only">close</i>
+            </a>
+            <div class="fab-buttons fab-buttons-top">
+                <a href="" class="fab-label-button">
+                    <span>1</span>
+                    <span class="fab-label">Action 1</span>
+                </a>
+                <a href="" class="fab-label-button">
+                    <span>2</span>
+                    <span class="fab-label">Action 2</span>
+                </a>
+                <a href="" class="fab-label-button">
+                    <span>3</span>
+                    <span class="fab-label">Third Action</span>
+                </a>
+            </div>
         </div> -->
+
+
+        <div class="sheet-modal demo-sheet" style="height: 80%;">
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                <div class="left"></div>
+                <div class="right">
+                    <a class="link sheet-close"><i class="mdi mdi-window-close"></i></a>
+                </div>
+                </div>
+            </div>
+            <div class="sheet-modal-inner">
+                <div class="page-content" >
+                <div class="block block">
+                    <form class="list" style="justify-content: space-between;" id="my-form">
+                    <ul>
+                    <div style="font-size: 20px; color: #5a2200;">Dados Pessoais</div>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Nome</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="nome" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Razão Social</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="razao" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">CNPJ</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="cnpj" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">E-mail</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="email" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Telefone</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="fone" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <br>
+                    <div style="font-size: 20px; color: #5a2200;">Endereço</div>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Nome do Endereço</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="nome_endereco" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">CEP</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="cep" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Rua</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="rua" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Número</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="numero" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Bairro</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="bairro" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Estado</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="estado" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                        <div class="item-inner">
+                            <div class="item-title item-floating-label">Cidade</div>
+                            <div class="item-input-wrap">
+                            <input type="text" name="cidade" placeholder="">
+                            <span class="input-clear-button"></span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    </ul>
+                </form>
+                <div class="block grid grid-cols-3 grid-gap">
+                    <a></a>
+                    <a></a>
+                    <button class="button button-tonal">Adicionar</button>
+                </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+
+
+        <div class="sheet-modal perfil-sheet" style="height: 90%;">
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                <div class="left"></div>
+                <div class="right">
+                    <a class="link sheet-close"><i class="mdi mdi-window-close"></i></a>
+                </div>
+                </div>
+            </div>
+        <div class="sheet-modal-inner">
+            <div style="text-align: center;">
+                <i class="mdi mdi-account" style="font-size: 64px;"></i>
+            </div>
+
+            <!-- <div style="display: flex; justify-content: space-between; padding: 0 16px;">
+                <div>Pecuarista</div>
+                <div>João Silva Agropecuária</div>
+            </div> -->
+
+            <div style="text-align: center; font-weight: lighter;">Pecuarista</div>
+            <div style="text-align: center; font-size: 20px; font-weight: bold;">João Silva Agropecuária</div>
+            
+            <!-- INFORMAÇÔES DE CONTATO -->
+            <div style="font-family: Arial, sans-serif; color: #3f2200; max-width: 360px; padding: 15px;">
+                <div style="font-weight: bold; margin-bottom: 12px;">Informações de Contato</div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <i class="mdi mdi-phone" style="font-size: 24px; margin-right: 12px;"></i>
+                    <div>
+                    <div style="font-size: 14px;">Telefone</div>
+                    <div>(31) 99876-5432</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <i class="mdi mdi-email" style="font-size: 24px; margin-right: 12px;"></i>
+                    <div>
+                    <div style="font-size: 14px;">Email</div>
+                    <div>contato@joaosilva.com.br</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center;">
+                    <i class="mdi mdi-map-marker" style="font-size: 24px; margin-right: 12px;"></i>
+                    <div>
+                    <div style="font-size: 14px;">Endereço</div>
+                    <div>Rodovia BR 040, km 456, Belo Horizonte, MG</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFORMAÇÔES ADICIONAIS -->
+            <div style="font-family: Arial, sans-serif; color: #3f2200; max-width: 360px;  padding: 15px;">
+                <div style="font-weight: bold; margin-bottom: 12px;">Informações Adicionais</div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <i class="mdi mdi-card-account-details" style="font-size: 24px; margin-right: 12px;"></i>
+                    <div>
+                    <div style="font-size: 14px;">CNPJ</div>
+                    <div>12.345.678/0001-90</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <i class="mdi mdi-calendar" style="font-size: 24px; margin-right: 12px;"></i>
+                    <div>
+                    <div style="font-size: 14px;">Cliente desde</div>
+                    <div>20 de Setembro de 2023</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center;">
+                    <i class="mdi mdi-currency-usd" style="font-size: 24px; margin-right: 12px;"></i>
+                    <div>
+                    <div style="font-size: 14px;">Total em compras</div>
+                    <div>R$ 45.970,00</div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            
+            <div style="display: flex; justify-content: space-between; padding: 0 16px;">
+                <button class="button button-fill">Editar Cliente</button>
+                <button class="button button-tonal">Nova Venda</button>
+            </div>
+
+
+        </div>
+        </div>
+
+        <div class="sheet-modal fazendas-sheet" style="height: 90%;">
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                <div class="left"></div>
+                <div class="right">
+                    <a class="link sheet-close"><i class="mdi mdi-window-close"></i></a>
+                </div>
+                </div>
+            </div>
+            <div class="sheet-modal-inner">
+                <p class="grid grid-cols-3 grid-gap" style="padding-left: 10px;">
+                    <button class="button button-tonal">Nova Fazenda</button>
+                    <div></div>
+                    <div></div>
+                </p>
+
+                <div class="list media-list  list-outline-ios list-strong-ios list-dividers-ios">
+                    <ul>
+                        <li>
+                            <a class="item-link">
+                                <div class="item-content">
+                                <div class="item-media"><img style="border-radius: 8px"
+                                    src="https://joaodomingosadv.com/wp-content/uploads/2020/10/fazenda-em-leilao.jpg.webp" width="70" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                    <div class="item-title">Fazenda 3C</div>
+                                    <div class="item-after"></div>
+                                    </div>
+                                    <div class="item-subtitle">12.123.123/1000-10</div>
+                                    <div class="item-text">Rua Oswaldo Cruz numero 30 - virando o bar do binha</div>
+                                </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item-link">
+                                <div class="item-content">
+                                <div class="item-media"><img style="border-radius: 8px"
+                                    src="https://joaodomingosadv.com/wp-content/uploads/2020/10/fazenda-em-leilao.jpg.webp" width="70" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                    <div class="item-title">Fazenda 3C</div>
+                                    <div class="item-after"></div>
+                                    </div>
+                                    <div class="item-subtitle">12.123.123/1000-10</div>
+                                    <div class="item-text">Rua Oswaldo Cruz numero 30 - virando o bar do binha</div>
+                                </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item-link">
+                                <div class="item-content">
+                                <div class="item-media"><img style="border-radius: 8px"
+                                    src="https://joaodomingosadv.com/wp-content/uploads/2020/10/fazenda-em-leilao.jpg.webp" width="70" />
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                    <div class="item-title">Fazenda 3C</div>
+                                    <div class="item-after"></div>
+                                    </div>
+                                    <div class="item-subtitle">12.123.123/1000-10</div>
+                                    <div class="item-text">Rua Oswaldo Cruz numero 30 - virando o bar do binha</div>
+                                </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+
         <!-- Top Navbar -->
         <!-- <div class="navbar">
             <div class="navbar-bg"></div>
@@ -331,11 +711,7 @@
         </div> -->
         
         <!-- Scrollable page content -->
-        <!-- <div class="page-content">
-            <div class="block">
-                Clientes
-            </div>
-        </div> -->
+        </div>
     </div>
 </div>
     <!-- Path to Framework7 Library Bundle JS-->
@@ -450,6 +826,8 @@
             });
         });
     </script>
+
+    
 </body>
 
 </html>

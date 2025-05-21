@@ -4,10 +4,30 @@
     --roxo: #19c463;
     --preto: #2a2a2a;
     --roxo: #8D51FF;
+    --marrom: #5a2200;
 
-    --f7-navbar-bg-color: #5a2200;
-    --f7-navbar-border-color: #5a2200;
+    /*CABEÇALHO*/
+    --f7-navbar-bg-color: var(--marrom);
+    --f7-navbar-border-color: var(--marrom);
     --f7-navbar-text-color: white;
+
+    
+    /*BOTAO FLUTUANTE*/
+    --f7-fab-margin: 16px;
+    --f7-fab-bg-color: var(--marrom);
+    --f7-fab-text-color: white;
+    --f7-fab-label-text-color: var(--f7-md-on-surface);
+    --f7-fab-label-bg-color: var(--f7-md-surface-5);
+
+    /*BOTAO NORMAL*/
+    --f7-button-fill-pressed-bg-color: #5a230060;
+    --f7-button-fill-bg-color: transparent;
+    --f7-button-fill-text-color: #5a2200;
+    --f7-button-tonal-bg-color: #5a2200;
+    --f7-button-tonal-pressed-bg-color: transparent;
+    --f7-button-tonal-text-color: white;
+
+    
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');

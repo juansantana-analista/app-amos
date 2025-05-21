@@ -1,3 +1,6 @@
+
+
+
 .page[data-name="clientes"] * {
     margin: 0;
     padding: 0;
@@ -198,7 +201,7 @@
     font-weight: bold;
     margin-bottom: 5px;
     color: #333;
-    height: 34px;
+    height: 40px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

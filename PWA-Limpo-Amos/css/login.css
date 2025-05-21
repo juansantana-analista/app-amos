@@ -9,15 +9,22 @@
   --text-color: #333333;
   --border-color: #E0E0E0;
   --input-background: #FAFAFA;
+
   --f7-label-focused-text-color: none;
-  --f7-input-focused-border-color: none;
-  --f7-input-placeholder-color: none;
   --f7-input-item-bg-color: none;
   --f7-input-border-color: none;
-  --f7-input-clear-button-color: none;
+  --f7-input-focused-border-color: none;
+  --f7-label-text-color: none; 
+
+  /* 
   --f7-input-outline-border-color: none;
+  --f7-input-placeholder-color: none;
+  --f7-input-clear-button-color: none;
   --f7-input-text-color: none;
-  --f7-label-text-color: none;
+  */
+
+
+  
 }
 
 /* Estilos gerais */
@@ -222,42 +229,42 @@
   margin: 0 auto;
 }
 
-.page[data-name="login"] input {
+/* .page[data-name="login"] input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
+} */
 
 /* Remove fundo azul claro dos wrappers */
-.page[data-name="login"] .item-input-wrap {
+/* .page[data-name="login"] .item-input-wrap {
   background-color: white !important;
   box-shadow: none !important;
   border: none !important;
   padding: 0 !important;
-}
+} */
 
 /* Remove fundo azul da div acima do input */
-.page[data-name="login"] .item-inner {
+/* .page[data-name="login"] .item-inner {
   background-color: white !important;
   padding: 0 !important;
   border: none !important;
-}
+} */
 
 /* Remove linhas automáticas adicionadas por Framework7 */
-.page[data-name="login"] .item-input-wrap:after,
+/* .page[data-name="login"] .item-input-wrap:after,
 .page[data-name="login"] .item-inner:after {
   display: none !important;
-}
+} */
 
 /* Estiliza o input */
-.page[data-name="login"] .item-input-wrap input {
+/* .page[data-name="login"] .item-input-wrap input {
   background-color: #ffffff !important;
   border: 1px solid #ccc !important;
   border-radius: 6px !important;
   height: 48px !important;
   padding: 10px 15px !important;
   box-shadow: none !important;
-}
+} */
 
 .page[data-name="login"] input:focus {
   outline: none;
